@@ -9,3 +9,8 @@ body {
     background-color: #000; /* Adjust color */
     margin: 20px 0; /* Adjust spacing */
 }
+
+.hover-darken:hover {
+    filter: brightness(70%); /* Adjust the value to control darkness */
+    transition: filter 0.3s ease-in-out;    
+}
