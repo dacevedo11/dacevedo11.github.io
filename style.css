@@ -2,3 +2,10 @@ body {
     font-family: 'Roboto Mono', sans-serif !important;
     background-color: #FAF9F6;
 }
+
+.divider {
+    width: 100%;
+    height: 2px; /* Adjust thickness */
+    background-color: #000; /* Adjust color */
+    margin: 20px 0; /* Adjust spacing */
+}
