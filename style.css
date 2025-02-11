@@ -14,3 +14,8 @@ body {
     filter: brightness(70%); /* Adjust the value to control darkness */
     transition: filter 0.3s ease-in-out;    
 }
+
+.hover-scale:hover {
+    transform: scale(1.1); /* Adjust the value to control scale */
+    transition: transform 0.3s ease-in-out;
+}

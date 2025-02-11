@@ -16,57 +16,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/7c66d7972b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <!-- Header -->
-    <header class="bg-dark text-white py-4 px-4">
+    <header class="bg-dark text-white p-4 sticky-top">
         <div class="container d-flex justify-content-between align-items-center">
             <h3>Daniel Acevedo</h3>
             <nav>
                 <ul class="nav">
                     <li class="nav-item h5"><a class="nav-link text-white" href="index.html">Portfolio</a></li>
-                    <li class="nav-item h5"><a class="nav-link text-white" href="about.html">About</a></li>
+                    <li class="nav-item h5"><a class="nav-link text-white" aria-current="page" href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <div class="d-flex justify-content-center align-items-center vh-100">
-        <div class="container">
-
-            <!-- Row 1 -->
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique nisi eu lorem
-                        landit, vel luctus elit porta. </p>
-                </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/placeholder.jpg" alt="placeholder" class="img-fluid img-thumbnail">
-                </div>
+    <div class="container d-flex justify-content-center align-items-center flex-column my-5 py-5">
+        <!-- Row 1 -->
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean posuere, dolor sit amet
+                    scelerisque sollicitudin, felis odio suscipit lacus, eget vulputate sapien elit eu libero.
+                    Donec fermentum malesuada massa ac consequat. Vivamus eu dui eu nunc fringilla lacinia.
+                    <br><br>
+                    Morbi non ex in lectus semper pharetra id quis libero. Nulla eu leo suscipit orci pretium
+                    ultrices tincidunt a metus. Nulla consectetur euismod eros, feugiat semper velit. Aenean sed
+                    varius ipsum, nec commodo justo. Mauris molestie maximus nulla, a tristique erat eleifend eget.
+                    <br><br>
+                    Donec mollis vel risus et varius. Donec at ipsum elementum, porta nibh sit amet, condimentum
+                    lectus. Mauris elementum semper dui, sit amet tristique turpis suscipit eget. Nulla tortor
+                    justo, aliquam sed luctus et, tempus et tortor. Sed commodo gravida enim, ac pharetra tortor.
+                    Ut iaculis est sed vulputate rutrum. Vivamus luctus diam eu quam feugiat, nec bibendum lorem
+                    venenatis.
+                </p>
             </div>
-
-            <!-- Row 2 // Horizontal Divider -->
-            <div class="row">
-                <hr>
+            <div class="col-md-6 text-center">
+                <img src="images/placeholder.jpg" alt="placeholder" class="img-fluid img-thumbnail shadow-lg">
             </div>
-
-            <!-- Row 3 -->
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center">
-                    <div class="icon-circle"><i class="bi bi-linkedin"></i></div>
-                    <div class="icon-circle">2</div>
-                    <div class="icon-circle">3</div>
-                    <div class="icon-circle">4</div>
-                    <div class="icon-circle">5</div>
-                </div>
+        </div>
+    
+        <!-- Horizontal Divider -->
+        <hr class="my-5 w-100">
+    
+        <!-- Row 2 -->
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center gap-5">
+                <a class="icon-link link-dark link-underline link-underline-opacity-0 hover-scale" href="#"><i class="fa-brands fa-linkedin fa-4x"></i></a>
+                <a class="icon-link link-dark link-underline link-underline-opacity-0 hover-scale" href="#"><i class="fa-brands fa-bluesky fa-4x"></i></a>
+                <a class="icon-link link-dark link-underline link-underline-opacity-0 hover-scale" href="#"><i class="fa-brands fa-discord fa-4x"></i></a>
             </div>
-
         </div>
     </div>
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
