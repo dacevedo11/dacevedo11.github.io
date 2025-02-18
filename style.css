@@ -19,3 +19,10 @@ body {
     transform: scale(1.1); /* Adjust the value to control scale */
     transition: transform 0.3s ease-in-out;
 }
+
+#pfp {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
