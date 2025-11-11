@@ -18,6 +18,40 @@
     <link rel="stylesheet" href="../style.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7c66d7972b.js" crossorigin="anonymous"></script>
+    
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .content-section {
+            margin-bottom: 4rem;
+        }
+        
+        .section-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -39,10 +73,10 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container d-flex justify-content-center align-items-center flex-column my-5 py-5">
+    <div class="container my-5 py-5">
 
         <!-- Header -->
-        <div class="row text-center justify-content-center">
+        <div class="row text-center justify-content-center mb-5">
             <div class="col-12">
                 <p class="text-danger">*This page and its content is under construction.*</p>
                 <h3>UE5 Networked Multiplayer FPS</h3>
@@ -51,33 +85,112 @@
         </div>
 
         <!-- Horizontal Divider -->
-        <hr class="w-100">
+        <hr class="w-100 mb-5">
 
-
-        <!-- Video 1 -->
-        <div class="row w-100 mb-5">
-            <div class="col-12 text-center">
-                <div class="ratio ratio-16x9 mb-3" style="max-width: 700px; margin: 0 auto;">
-                    <iframe src="https://www.youtube.com/embed/brGHLDx1Or0?si=cyowARdZwMwanpF8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Section 1: Aim Offsets - Text Left, Video Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5>Aim Offsets</h5>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        ea commodo consequat.
+                    </p>
                 </div>
-                <h5>Puzzle Switches - 3D Puzzle Game</h5>
-                <p class="text-muted">Interactive switch mechanics and spatial puzzle design</p>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/E8s4AWhbE8w?si=zERsv4QxoJgMq2Do"
+                            title="Aim Offsets Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
 
+        <!-- Section 2: Killing Sprees - Video Left, Text Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-1 order-2">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/xPkHPQJSRsM?si=gvWvSXdxePM7-wwQ"
+                            title="Killing Sprees Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2 order-1">
+                    <h5>Killing Sprees</h5>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
+
+        <!-- Section 3: Respawn Timer - Text Left, Video Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5>Respawn Timer</h5>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        ea commodo consequat.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/PUDLYDZVECU?si=qqxz-TnjuKM2ic76"
+                            title="Respawn Timer Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
+
+        <!-- Section 4: Ready Check - Video Left, Text Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-1 order-2">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/l3M-Cm7_RBA?si=peWluGC13-XuSUuB"
+                            title="Ready Check Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2 order-1">
+                    <h5>Ready Check</h5>
+                    <p class="text-muted">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <!-- Back Link -->
-        <div class="row w-100">
-            <a href="../index.html" class="text-dark d-block text-start ps-2">&lt; Back to Portfolio</a>
+        <div class="row w-100 mt-5">
+            <div class="col-12">
+                <a href="../index.html" class="text-dark d-block text-start">&lt; Back to Portfolio</a>
+            </div>
         </div>
     </div>
-
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

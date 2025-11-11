@@ -18,6 +18,40 @@
     <link rel="stylesheet" href="../style.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/7c66d7972b.js" crossorigin="anonymous"></script>
+    
+    <style>
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        .content-section {
+            margin-bottom: 4rem;
+        }
+        
+        .section-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -39,10 +73,10 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container d-flex justify-content-center align-items-center flex-column my-5 py-5">
+    <div class="container my-5 py-5">
 
         <!-- Header -->
-        <div class="row text-center justify-content-center">
+        <div class="row text-center justify-content-center mb-5">
             <div class="col-12">
                 <p class="text-danger">*This page and its content is under construction.*</p>
                 <h3>UE5 Top Down Game</h3>
@@ -51,33 +85,154 @@
         </div>
 
         <!-- Horizontal Divider -->
-        <hr class="w-100">
+        <hr class="w-100 mb-5">
 
-
-        <!-- Video 1 -->
-        <div class="row w-100 mb-5">
-            <div class="col-12 text-center">
-                <div class="ratio ratio-16x9 mb-3" style="max-width: 700px; margin: 0 auto;">
-                    <iframe src="https://www.youtube.com/embed/brGHLDx1Or0?si=cyowARdZwMwanpF8"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Section 1: Puzzle Switches - Text Left, Video Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5>Puzzle Switches</h5>
+                    <p class="text-muted">
+                        Used C++ and Blueprints to implement multiple puzzles utilizing a custom C++ class UPuzzleComponent.
+                        When the output is active, it sends the output to the OutputActor, in this case a puzzle light indicating
+                        if the puzzle is solved or not.
+                    </p>
+                    <ul class="text-muted">
+                        <li><strong>OR</strong> - Activates as long as any of the inputs are true</li>
+                        <li><strong>AND</strong> - Activates only when all inputs are true</li>
+                        <li><strong>SEQUENCE</strong> - Activates when inputs are activated in a specific order</li>
+                        <li><strong>CUSTOM</strong> - A Timer puzzle, where all inputs must be activated within a time limit</li>
+                    </ul>
                 </div>
-                <h5>Puzzle Switches - 3D Puzzle Game</h5>
-                <p class="text-muted">Interactive switch mechanics and spatial puzzle design</p>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/brGHLDx1Or0?si=cyowARdZwMwanpF8"
+                            title="Puzzle Switches Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
 
+        <!-- Section 2: Flaming Swing - Video Left, Text Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-1 order-2">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/hzSpENvWMmA?si=Shnmb_EOBxGaXm-b"
+                            title="Flaming Swing Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2 order-1">
+                    <h5>Flaming Swing Puzzle</h5>
+                    <p class="text-muted">
+                        Created a UFireComponent in C++ to spread fire between objects. UFireComponent tracks whether 
+                        the object is on fire or not. It has a sphere collision that generates overlap events. If an 
+                        "on-fire" component overlaps with another UFireComponent, the fire spreads.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
+
+        <!-- Section 3: Physics-based Puzzle - Text Left, Video Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5>Physics-Based Puzzle</h5>
+                    <p class="text-muted">
+                        A custom physics-based puzzle. The player must move crates onto pressure plates. One crate requires
+                        an additional puzzle piece and platform (Level Sequence) to "unlock" it. Once all 3 pressure plates are activated, 
+                        the burning boulder is released, rolling down and spreading its fire to light the torch, finally unlocking the door. 
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/5AzaT35OWdI?si=LYaWvPkkPMUrWgyE"
+                            title="Physics-based Puzzle Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
+
+        <!-- Section 4: Dash and Death - Video Left, Text Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-1 order-2">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/g_z29CNw-MY?si=un38FpHZGYT9agZd"
+                            title="Dash and Death Mechanics Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-2 order-1">
+                    <h5>Dash Abiltiy and Damage/Death</h5>
+                    <p class="text-muted">
+                        Using Unreal Engine's Gameplay Ability System (GAS), I implemented a player Dash ability in GA_Dash. I used
+                        gameplay tags Ability.Dash to prevent ability overlap and Buff.Invulnerable.IFrame so the player
+                        is invulnerable for part of the dash. For the dash itself, I made an AnimMontage. The ability logic
+                        is handled in Blueprints and the ability granting and activation is handled in C++.
+                        <br><br>
+                        Damage and Death mechanics were also implemented using GAS, in GA_Death and gameplay tags Debuff.Immobile.Dead
+                        and Debuff.Burning. The gameplay debugger shows the player has Ability.Dash when dashing, 
+                        Debuff.Burning when on fire, and Debuff.Immobile.Dead when dead.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
+
+        <!-- Section 5: Enemy AI - Text Left, Video Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5>Enemy AI and Stealth</h5>
+                    <p class="text-muted">
+                        Setup an AI character using Behavior Trees. The AI uses a Line Trace Check to "see the player". 
+                        If chasing, the AI will dash to close the distance if the player is far away. When the player enters
+                        the Stealth Trigger, the AI loses sight and begins patrolling. 
+                        <br><br>
+                        The asterisk on the screen indicates the current threat level (from highest to lowest: Purple, 
+                        Red, Yellow, Blue, Green). By default, the threat level is Red. If the character is moving, 
+                        the threat level increases by one tier. If the character is crouching, the threat level decreases by one tier.
+                        If the character is in the stealth trigger, the threat level decreases by one for each stealth trigger they
+                        are inside of. When the player crouches inside the stealth area, the AI loses sight of the player. 
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/IrRJCW50uwY?si=D4pzWtS0VZfthFiI"
+                            title="Enemy AI Demo" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Back Link -->
-        <div class="row w-100">
-            <a href="../index.html" class="text-dark d-block text-start ps-2">&lt; Back to Portfolio</a>
+        <div class="row w-100 mt-5">
+            <div class="col-12">
+                <a href="../index.html" class="text-dark d-block text-start">&lt; Back to Portfolio</a>
+            </div>
         </div>
     </div>
-
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
