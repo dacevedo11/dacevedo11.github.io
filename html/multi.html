@@ -79,7 +79,7 @@
         <div class="row text-center justify-content-center mb-5">
             <div class="col-12">
                 <p class="text-danger">*This page and its content is under construction.*</p>
-                <h3>UE5 Networked Multiplayer FPS</h3>
+                <h3>UE5 Multiplayer FPS</h3>
                 <h5 class="text-secondary">Gameplay Programmer</h5>
                 <a href="https://github.com/dacevedo11/Multi" class="btn btn-outline-dark mt-3"
                     target="_blank">
@@ -91,21 +91,22 @@
         <!-- Horizontal Divider -->
         <hr class="w-100 mb-5">
 
-        <!-- Section 1: Aim Offsets - Text Left, Video Right -->
+        <!-- Section 1: Domination Game Mode - Text Left, Video Right -->
         <div class="content-section">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h5>Aim Offsets</h5>
+                    <h5>Domination Game Mode</h5>
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        ea commodo consequat.
+                        Implemented a networked domination game mode in Unreal Engine 5 using C++/Blueprint, featuring
+                        server-authoritative capture points with per-team progress tracking, contested state handling, real-time UI updates via
+                        client RPCs, dynamic visual feedback through replicated material systems, and EGS OnlineSubsystem integration for
+                        matchmaking and lobby creation
                     </p>
                 </div>
                 <div class="col-md-6">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/E8s4AWhbE8w?si=zERsv4QxoJgMq2Do"
-                            title="Aim Offsets Demo" frameborder="0"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/sKxedLj-Ncg?si=BLzogTMcRiRLtXlk"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
@@ -116,28 +117,28 @@
         <!-- Horizontal Divider -->
         <hr class="w-100 mb-5">
 
-        <!-- Section 2: Killing Sprees - Video Left, Text Right -->
+        <!-- Section 2: Aim Offsets - Video Left, Text Right -->
         <div class="content-section">
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-1 order-2">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/xPkHPQJSRsM?si=gvWvSXdxePM7-wwQ"
-                            title="Killing Sprees Demo" frameborder="0"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bYkgdNGLp9g?si=j2MVrDBYF1SHjSMi"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col-md-6 order-md-2 order-1">
-                    <h5>Killing Sprees</h5>
+                    <h5>Aim Offsets</h5>
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        ea commodo consequat.
+                        Replicated third-person aim animations by implementing control rotation replication from server to clients,
+                        calculating interpolated pitch offsets to account for network latency, and integrating dynamic aim offset blending in
+                        Unreal's Animation Blueprint system
                     </p>
                 </div>
             </div>
         </div>
-
+        
         <!-- Horizontal Divider -->
         <hr class="w-100 mb-5">
 
@@ -147,15 +148,14 @@
                 <div class="col-md-6">
                     <h5>Respawn Timer</h5>
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        ea commodo consequat.
+                        Timed respawn with anti-camping by creating dynamic spawn point selection that filters locations
+                        based on enemy proximity.
                     </p>
                 </div>
                 <div class="col-md-6">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/PUDLYDZVECU?si=qqxz-TnjuKM2ic76"
-                            title="Respawn Timer Demo" frameborder="0"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/AkE3Wz4mg9o?si=sV_a-0rULQHSTfLv"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
@@ -171,8 +171,8 @@
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-1 order-2">
                     <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/l3M-Cm7_RBA?si=peWluGC13-XuSUuB"
-                            title="Ready Check Demo" frameborder="0"
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/f9NbEji2GVs?si=57CWUl_3vtkmrPYL"
+                            title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
@@ -180,10 +180,33 @@
                 <div class="col-md-6 order-md-2 order-1">
                     <h5>Ready Check</h5>
                     <p class="text-muted">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        ea commodo consequat.
+                        Lobby ready-check system with replicated player count tracking, client RPCs for UI state management, delegate-based
+                        checkbox event handling, and server-authoritative match start conditions requiring all players to ready up
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <hr class="w-100 mb-5">
+
+        <!-- Section 5: Chat - Text Left, Video Right -->
+        <div class="content-section">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h5>Chat</h5>
+                    <p class="text-muted">
+                        Team and All text chat using reliable client-server RPCs for message routing, scrollable message display, text input
+                        handling, and seamless switching between chat and gameplay controls
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iQaDW5fGBcs?si=sK7s6a87V1N7H9Ig"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
